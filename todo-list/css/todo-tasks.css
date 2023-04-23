@@ -1,0 +1,120 @@
+.todo__tasks {
+  margin: 20px 0px;
+}
+
+.list-task:not(:last-child) {
+  margin: 0px 0px 20px 0px;
+}
+
+.task-item {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.task-item__date {
+  color: #377dff;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  margin: 0px 0px 10px 0px;
+}
+
+.task-item__row {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.task-item__description {
+  text-align: justify;
+  color: #377dff;
+  line-height: 140%;
+}
+
+.task-item__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 30px;
+}
+
+.task-item__toggle[type="checkbox"] {
+  appearance: none;
+  height: 2em;
+  width: 3.75em;
+  background-color: #e2e2ec;
+  border-radius: 1.25em;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+.task-item__toggle[type="checkbox"]:before {
+  position: absolute;
+  content: "";
+  background-color: #757683;
+  height: 1.43em;
+  width: 1.43em;
+  border-radius: 50%;
+  top: 0.25em;
+  left: 0.25em;
+}
+.task-item__toggle[type="checkbox"]:checked {
+  background-color: #d2e2ff;
+}
+.task-item__toggle[type="checkbox"]:checked:before {
+  background-color: #377dff;
+  left: 1.7em;
+}
+
+.task-item__delete {
+  background-color: #377dff;
+  width: 45px;
+  min-height: 30px;
+  margin-left: 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3px 0px;
+}
+.task-item__delete img {
+  width: 60%;
+  pointer-events: none;
+}
+
+.task-empty {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.task-empty__icon {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.task-empty__title {
+  color: #377dff;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+.task-completed {
+  text-decoration: line-through;
+}
+
+@media (max-width: 600px) {
+  .task-item__row {
+    flex-flow: column nowrap;
+  }
+
+  .task-item__buttons {
+    width: 100%;
+    margin: 15px 0px 0px 0px;
+  }
+}

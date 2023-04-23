@@ -1,0 +1,31 @@
+.todo__buttons {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo__button {
+  background-color: #377dff;
+  color: white;
+  min-height: 40px;
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+@media (max-width: 500px) {
+  .todo__buttons {
+    flex-direction: column;
+  }
+
+  .todo__button {
+    width: 100%;
+  }
+
+  .todo__button:not(:last-child) {
+    margin: 0px 0px 10px 0px;
+  }
+}
