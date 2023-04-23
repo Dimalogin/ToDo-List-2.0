@@ -1,0 +1,121 @@
+.todo {
+  padding: 80px 0px;
+}
+
+.todo__container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.todo__form {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.form-data {
+  margin: 0px 0px 20px 0px;
+}
+
+.field__title {
+  color: #377dff;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  margin: 0px 0px 10px 0px;
+  display: block;
+}
+
+.field__row {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0px 0px 20px 0px;
+}
+
+.field__text {
+  border: 1px solid #377dff;
+  border-radius: 3px;
+  flex: 1 0 auto;
+  padding: 3px 10px;
+  color: #2672ff;
+  min-height: 40px;
+}
+
+.field__text:focus {
+  border: 2px solid #2672ff;
+}
+
+.field__btn {
+  margin-left: 20px;
+  background-color: #377dff;
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 3px 10px;
+  min-height: 40px;
+}
+
+.date {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.date__title {
+  color: #377dff;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  margin: 0px 0px 10px 0px;
+  display: block;
+}
+
+.date__field {
+  border: 1px solid #377dff;
+  border-radius: 3px;
+  min-height: 40px;
+  padding: 3px 10px;
+  color: #377dff;
+  cursor: pointer;
+}
+
+.date__field:focus {
+  border: 2px solid #2672ff;
+}
+
+.state-title {
+  color: #377dff;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  margin: 0px 0px 10px 0px;
+}
+
+.state-filter {
+  width: 100%;
+  border: 1px solid #377dff;
+  border-radius: 3px;
+  min-height: 40px;
+  padding: 3px 10px;
+  background-color: transparent;
+  color: #377dff;
+  cursor: pointer;
+}
+
+.state-filter:focus {
+  border: 2px solid #377dff;
+}
+
+@media (max-width: 500px) {
+  .todo {
+    padding: 50px 0px;
+  }
+
+  .field__row {
+    flex-flow: column nowrap;
+  }
+
+  .field__text {
+    margin-bottom: 15px;
+  }
+
+  .field__btn {
+    margin-left: 0px;
+  }
+}
