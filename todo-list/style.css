@@ -1,0 +1,28 @@
+@import url(./css/reset.css);
+@import url(./css/todo-form.css);
+@import url(./css/todo-buttons.css);
+@import url(./css/todo-tasks.css);
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+  font-size: 14px;
+  font-family: Montserrat;
+  font-weight: 500;
+  background-color: #377dff;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0px auto;
+  padding: 0px 15px;
+  box-sizing: content-box;
+}
