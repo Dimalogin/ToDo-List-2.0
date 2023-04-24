@@ -20,20 +20,17 @@ export class TodoDataBaseState {
 
   #dbPromise = openStateDb(this.#dbName, this.#migrations);
 
-  initState() {
+  initState(state) {
     return this.#dbPromise.then((db) => {
-      readStateFromDB(db, this.#storageName, 1).then((state) => {
-        if (state === undefined) {
-          addStateIntoDB(db, this.#storageName);
+      return readStateFromDB(db, this.#storageName, 1).then((res) => {
+        if (res === undefined) {
+          addStateIntoDB(db, this.#storageName, state);
+          return state;
+        } else {
+          return readStateFromDB(db, this.#storageName, 1);
         }
       });
     });
-  }
-
-  getCurrentState() {
-    return this.#dbPromise.then((db) =>
-      readStateFromDB(db, this.#storageName, 1)
-    );
   }
 
   toggleState(state) {
