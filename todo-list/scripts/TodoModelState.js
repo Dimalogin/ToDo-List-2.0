@@ -5,12 +5,8 @@ export class TodoModelState {
   #dbState = new TodoDataBaseState();
   #dbTasks = new TodoDataBaseTasks();
 
-  state() {
-    this.#dbState.initState();
-  }
-
-  currentState() {
-    return this.#dbState.getCurrentState();
+  state(state) {
+    return this.#dbState.initState(state);
   }
 
   updateState(value) {

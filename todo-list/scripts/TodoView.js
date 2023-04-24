@@ -51,6 +51,7 @@ export class TodoView {
   #select = null;
   #buttons = null;
   #tasks = [];
+  #initialState = { state: "all-tasks" };
 
   constructor() {
     this.render();
@@ -61,8 +62,7 @@ export class TodoView {
   render() {
     this.#initTemplate();
     this.#initModels();
-    this.#onState();
-    this.#onCurrentState();
+    this.#onState(this.#initialState);
     this.#bindListeners();
   }
 
@@ -97,12 +97,8 @@ export class TodoView {
 
   // State
 
-  #onState() {
-    this.#modelState.state();
-  }
-
-  #onCurrentState() {
-    this.#modelState.currentState().then((object) => {
+  #onState(state) {
+    this.#modelState.state(state).then((object) => {
       this.#selectOption(object);
       this.#viewData(object.state);
     });
